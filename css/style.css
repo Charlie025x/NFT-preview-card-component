@@ -14,6 +14,7 @@ body {
   font-size: 18px;
   font-family: 'Outfit', sans-serif;
   font-weight: 300;
+  line-height: 1.5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,6 +36,8 @@ body {
   padding: 1rem;
   border-radius: 1rem;
   color: var(--clr-soft-blue);
+  -webkit-box-shadow: 0 10px 10px black;
+          box-shadow: 0 10px 10px black;
 }
 
 .card .card-img {
@@ -44,7 +47,7 @@ body {
 }
 
 .card p {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
 
 .card .title {
@@ -66,11 +69,57 @@ body {
   color: var(--clr-cyan);
 }
 
+.card .status .eth::before {
+  content: '';
+  display: inline-block;
+  height: 18px;
+  width: 11px;
+  background-image: url(../images/icon-ethereum.svg);
+  -webkit-transform: translate(0, 2px);
+          transform: translate(0, 2px);
+  margin-right: 5px;
+}
+
+.card .status .time::before {
+  content: '';
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  background-image: url(../images/icon-clock.svg);
+  -webkit-transform: translate(0, 3px);
+          transform: translate(0, 3px);
+  margin-right: 5px;
+}
+
+.card .creator {
+  padding-top: 1rem;
+}
+
+.card .creator::before {
+  content: '';
+  background-color: var(--clr-soft-blue);
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-bottom: .5rem;
+}
+
+.card .creator img {
+  height: 30px;
+  width: 30px;
+  border: var(--clr-white) 1px solid;
+  border-radius: 50%;
+  margin-right: 10px;
+  -webkit-transform: translate(0px, 25%);
+          transform: translate(0px, 25%);
+}
+
 .card .creator a {
   color: var(--clr-white);
 }
 
 .attribution {
+  margin-top: 2rem;
   font-size: 11px;
   text-align: center;
   color: #929aa5;
