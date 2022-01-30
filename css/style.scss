@@ -34,6 +34,19 @@ body {
     width: 100%;
     border-radius: .5rem;
     margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  .relative {
+    position: relative;
+  }
+  // On click Eye Icon
+  .icon-view {
+    position: absolute;
+    display: none;
+    // display: block;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
   }
   p {
     margin-bottom: .5rem;
@@ -42,6 +55,13 @@ body {
     color: var(--clr-white);
     font-size: 1.5rem;
     font-weight: 600;
+    a {
+      color: var(--clr-white);
+      cursor: pointer;
+      &:active {
+        color: var(--clr-cyan);
+      }
+    }
   }
   .status {
     display: flex;
@@ -90,6 +110,10 @@ body {
     }
     a {
       color: var(--clr-white);
+      cursor: pointer;
+      &:active {
+        color: var(--clr-cyan);
+      }
     }
   }
 }
