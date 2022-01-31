@@ -40,24 +40,47 @@ body {
           box-shadow: 0 10px 10px black;
 }
 
-.card .card-img {
+.card .img-container {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.card .img-container .card-img {
   width: 100%;
   border-radius: .5rem;
-  margin-bottom: 1rem;
   cursor: pointer;
 }
 
-.card .relative {
-  position: relative;
-}
-
-.card .icon-view {
+.card .img-container .icon-eye {
   position: absolute;
-  display: none;
+  padding: 40%;
   bottom: 50%;
   right: 50%;
   -webkit-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.card .img-container:hover .icon-eye {
+  opacity: 1;
+}
+
+.card .img-container:hover::after {
+  opacity: .5;
+}
+
+.card .img-container::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 320px;
+  width: 100%;
+  background-color: var(--clr-cyan);
+  opacity: 0;
 }
 
 .card p {
@@ -75,7 +98,7 @@ body {
   cursor: pointer;
 }
 
-.card .title a:active {
+.card .title a:hover {
   color: var(--clr-cyan);
 }
 
@@ -142,7 +165,7 @@ body {
   cursor: pointer;
 }
 
-.card .creator a:active {
+.card .creator a:hover {
   color: var(--clr-cyan);
 }
 
